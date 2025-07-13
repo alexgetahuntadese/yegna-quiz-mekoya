@@ -63,5 +63,129 @@ export const grade11ChemistryChapters: Chapter[] = [
         difficulty: 'hard'
       }
     ]
+  },
+  {
+    id: 'chem-11-3',
+    name: 'States of Matter',
+    description: 'Properties and behavior of solids, liquids, and gases',
+    questions: [
+      {
+        id: 'chem-11-3-1',
+        question: 'What happens to the kinetic energy of gas molecules when temperature increases?',
+        options: ['Decreases', 'Increases', 'Stays the same', 'Becomes zero'],
+        correct: 'Increases',
+        explanation: 'Higher temperature means higher average kinetic energy of gas molecules.',
+        difficulty: 'easy'
+      },
+      {
+        id: 'chem-11-3-2',
+        question: 'According to Charles\' Law, what happens to gas volume when temperature increases at constant pressure?',
+        options: ['Volume decreases', 'Volume increases', 'Volume stays constant', 'Volume becomes zero'],
+        correct: 'Volume increases',
+        explanation: 'Charles\' Law states that volume is directly proportional to temperature at constant pressure.',
+        difficulty: 'medium'
+      },
+      {
+        id: 'chem-11-3-3',
+        question: 'What is the ideal gas equation?',
+        options: ['PV = nRT', 'P = VnRT', 'V = PnRT', 'T = PVnR'],
+        correct: 'PV = nRT',
+        explanation: 'The ideal gas law relates pressure, volume, moles, and temperature.',
+        difficulty: 'hard'
+      }
+    ]
+  },
+  {
+    id: 'chem-11-4',
+    name: 'Chemical Thermodynamics',
+    description: 'Energy changes in chemical reactions',
+    questions: [
+      {
+        id: 'chem-11-4-1',
+        question: 'What is enthalpy?',
+        options: ['Heat content of a system', 'Temperature change', 'Pressure change', 'Volume change'],
+        correct: 'Heat content of a system',
+        explanation: 'Enthalpy (H) represents the heat content of a system at constant pressure.',
+        difficulty: 'easy'
+      },
+      {
+        id: 'chem-11-4-2',
+        question: 'In an exothermic reaction, what happens to enthalpy?',
+        options: ['ΔH > 0', 'ΔH < 0', 'ΔH = 0', 'ΔH is undefined'],
+        correct: 'ΔH < 0',
+        explanation: 'Exothermic reactions release heat, so the change in enthalpy is negative.',
+        difficulty: 'medium'
+      },
+      {
+        id: 'chem-11-4-3',
+        question: 'What does Hess\'s Law state?',
+        options: ['Energy cannot be created or destroyed', 'The total enthalpy change is independent of the pathway', 'Reactions proceed to equilibrium', 'Temperature affects reaction rate'],
+        correct: 'The total enthalpy change is independent of the pathway',
+        explanation: 'Hess\'s Law states that enthalpy change depends only on initial and final states.',
+        difficulty: 'hard'
+      }
+    ]
+  },
+  {
+    id: 'chem-11-5',
+    name: 'Chemical Equilibrium',
+    description: 'Understanding reversible reactions and equilibrium principles',
+    questions: [
+      {
+        id: 'chem-11-5-1',
+        question: 'What is chemical equilibrium?',
+        options: ['When reactants are consumed', 'When forward and reverse reaction rates are equal', 'When products are formed', 'When temperature is constant'],
+        correct: 'When forward and reverse reaction rates are equal',
+        explanation: 'Equilibrium occurs when the rates of forward and reverse reactions are equal.',
+        difficulty: 'easy'
+      },
+      {
+        id: 'chem-11-5-2',
+        question: 'According to Le Chatelier\'s principle, what happens when pressure is increased in a gaseous equilibrium?',
+        options: ['Equilibrium shifts to the side with more moles', 'Equilibrium shifts to the side with fewer moles', 'No change in equilibrium', 'Reaction stops'],
+        correct: 'Equilibrium shifts to the side with fewer moles',
+        explanation: 'Increasing pressure favors the side with fewer gas molecules to reduce pressure.',
+        difficulty: 'medium'
+      },
+      {
+        id: 'chem-11-5-3',
+        question: 'What is the equilibrium constant expression for: aA + bB ⇌ cC + dD?',
+        options: ['K = [A][B]/[C][D]', 'K = [C]^c[D]^d/[A]^a[B]^b', 'K = [A]^a[B]^b/[C]^c[D]^d', 'K = [C][D]/[A][B]'],
+        correct: 'K = [C]^c[D]^d/[A]^a[B]^b',
+        explanation: 'The equilibrium constant is products over reactants, each raised to their stoichiometric coefficients.',
+        difficulty: 'hard'
+      }
+    ]
+  },
+  {
+    id: 'chem-11-6',
+    name: 'Acids and Bases',
+    description: 'Properties and theories of acids and bases',
+    questions: [
+      {
+        id: 'chem-11-6-1',
+        question: 'According to Arrhenius theory, what do acids produce in water?',
+        options: ['OH⁻ ions', 'H⁺ ions', 'Electrons', 'Neutrons'],
+        correct: 'H⁺ ions',
+        explanation: 'Arrhenius acids produce hydrogen ions (H⁺) when dissolved in water.',
+        difficulty: 'easy'
+      },
+      {
+        id: 'chem-11-6-2',
+        question: 'What is the pH of a neutral solution at 25°C?',
+        options: ['0', '7', '14', '1'],
+        correct: '7',
+        explanation: 'Pure water at 25°C has a pH of 7, which is neutral.',
+        difficulty: 'medium'
+      },
+      {
+        id: 'chem-11-6-3',
+        question: 'In the Brønsted-Lowry theory, what is a base?',
+        options: ['Proton donor', 'Proton acceptor', 'Electron donor', 'Electron acceptor'],
+        correct: 'Proton acceptor',
+        explanation: 'Brønsted-Lowry bases accept protons (H⁺ ions) from acids.',
+        difficulty: 'hard'
+      }
+    ]
   }
 ];

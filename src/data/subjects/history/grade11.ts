@@ -125,5 +125,67 @@ export const grade11HistoryChapters: Chapter[] = [
         difficulty: 'hard'
       }
     ]
+  },
+  {
+    id: 'hist-11-5',
+    name: 'Ethiopian History - Medieval Period',
+    description: 'The Zagwe and Solomonic dynasties and their contributions',
+    questions: [
+      {
+        id: 'hist-11-5-1',
+        question: 'Which dynasty built the rock-hewn churches of Lalibela?',
+        options: ['Axumite', 'Zagwe', 'Solomonic', 'Gondarine'],
+        correct: 'Zagwe',
+        explanation: 'The Zagwe dynasty, particularly King Lalibela, constructed the famous rock churches.',
+        difficulty: 'easy'
+      },
+      {
+        id: 'hist-11-5-2',
+        question: 'What is the Kebra Nagast?',
+        options: ['A religious text', 'A legal code', 'A chronicle of kings', 'A trade agreement'],
+        correct: 'A religious text',
+        explanation: 'The Kebra Nagast (Glory of the Kings) is an important Ethiopian religious and historical text.',
+        difficulty: 'medium'
+      },
+      {
+        id: 'hist-11-5-3',
+        question: 'During which period did Ethiopia have its most extensive territorial expansion?',
+        options: ['Axumite period', 'Zagwe period', 'Early Solomonic period', 'Gondarine period'],
+        correct: 'Early Solomonic period',
+        explanation: 'The early Solomonic period saw significant territorial expansion and consolidation.',
+        difficulty: 'hard'
+      }
+    ]
+  },
+  {
+    id: 'hist-11-6',
+    name: 'African Civilizations',
+    description: 'Study of major African kingdoms and empires',
+    questions: [
+      {
+        id: 'hist-11-6-1',
+        question: 'Which West African empire was known for its wealth in gold?',
+        options: ['Mali', 'Songhai', 'Ghana', 'All of the above'],
+        correct: 'All of the above',
+        explanation: 'Ghana, Mali, and Songhai were all wealthy West African empires rich in gold.',
+        difficulty: 'easy'
+      },
+      {
+        id: 'hist-11-6-2',
+        question: 'What was the capital of the Mali Empire?',
+        options: ['Timbuktu', 'Niani', 'Gao', 'Kumbi Saleh'],
+        correct: 'Niani',
+        explanation: 'Niani served as the capital of the Mali Empire during its height.',
+        difficulty: 'medium'
+      },
+      {
+        id: 'hist-11-6-3',
+        question: 'Which African ruler made a famous pilgrimage to Mecca, displaying immense wealth?',
+        options: ['Sundiata Keita', 'Mansa Musa', 'Askia Mohammed', 'Shaka Zulu'],
+        correct: 'Mansa Musa',
+        explanation: 'Mansa Musa\'s pilgrimage to Mecca in 1324-1325 displayed Mali\'s incredible wealth.',
+        difficulty: 'hard'
+      }
+    ]
   }
 ];

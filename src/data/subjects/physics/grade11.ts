@@ -94,5 +94,98 @@ export const grade11PhysicsChapters: Chapter[] = [
         difficulty: 'hard'
       }
     ]
+  },
+  {
+    id: 'phys-11-4',
+    name: 'Work, Energy and Power',
+    description: 'Understanding work, energy transformations and power calculations',
+    questions: [
+      {
+        id: 'phys-11-4-1',
+        question: 'What is the SI unit of work?',
+        options: ['Newton', 'Joule', 'Watt', 'Pascal'],
+        correct: 'Joule',
+        explanation: 'Work is measured in Joules (J), which equals Newton-meters.',
+        difficulty: 'easy'
+      },
+      {
+        id: 'phys-11-4-2',
+        question: 'If a 10 N force moves an object 5 m, how much work is done?',
+        options: ['2 J', '15 J', '50 J', '0.5 J'],
+        correct: '50 J',
+        explanation: 'Work = Force × distance = 10 N × 5 m = 50 J.',
+        difficulty: 'medium'
+      },
+      {
+        id: 'phys-11-4-3',
+        question: 'What is the kinetic energy of a 2 kg object moving at 6 m/s?',
+        options: ['12 J', '36 J', '72 J', '6 J'],
+        correct: '36 J',
+        explanation: 'KE = ½mv² = ½ × 2 × 6² = ½ × 2 × 36 = 36 J.',
+        difficulty: 'hard'
+      }
+    ]
+  },
+  {
+    id: 'phys-11-5',
+    name: 'Momentum and Collisions',
+    description: 'Conservation of momentum and collision analysis',
+    questions: [
+      {
+        id: 'phys-11-5-1',
+        question: 'What is momentum?',
+        options: ['Mass × velocity', 'Force × time', 'Energy × time', 'Acceleration × mass'],
+        correct: 'Mass × velocity',
+        explanation: 'Momentum p = mv, where m is mass and v is velocity.',
+        difficulty: 'easy'
+      },
+      {
+        id: 'phys-11-5-2',
+        question: 'What is conserved in all collisions?',
+        options: ['Kinetic energy', 'Momentum', 'Velocity', 'Force'],
+        correct: 'Momentum',
+        explanation: 'The law of conservation of momentum applies to all collisions.',
+        difficulty: 'medium'
+      },
+      {
+        id: 'phys-11-5-3',
+        question: 'In an elastic collision between two objects, what is conserved?',
+        options: ['Only momentum', 'Only kinetic energy', 'Both momentum and kinetic energy', 'Neither momentum nor energy'],
+        correct: 'Both momentum and kinetic energy',
+        explanation: 'Elastic collisions conserve both momentum and kinetic energy.',
+        difficulty: 'hard'
+      }
+    ]
+  },
+  {
+    id: 'phys-11-6',
+    name: 'Rotational Motion',
+    description: 'Understanding circular motion and rotational dynamics',
+    questions: [
+      {
+        id: 'phys-11-6-1',
+        question: 'What is angular velocity?',
+        options: ['Linear speed in a circle', 'Rate of change of angular displacement', 'Centripetal acceleration', 'Rotational force'],
+        correct: 'Rate of change of angular displacement',
+        explanation: 'Angular velocity ω is the rate at which an object rotates, measured in rad/s.',
+        difficulty: 'easy'
+      },
+      {
+        id: 'phys-11-6-2',
+        question: 'What provides the centripetal force for a car going around a curve?',
+        options: ['Engine force', 'Friction from tires', 'Weight of car', 'Air resistance'],
+        correct: 'Friction from tires',
+        explanation: 'Friction between tires and road provides the centripetal force needed for circular motion.',
+        difficulty: 'medium'
+      },
+      {
+        id: 'phys-11-6-3',
+        question: 'If a wheel rotates at 60 rpm, what is its angular velocity in rad/s?',
+        options: ['π rad/s', '2π rad/s', '60π rad/s', '30π rad/s'],
+        correct: '2π rad/s',
+        explanation: '60 rpm = 60 × 2π/60 = 2π rad/s.',
+        difficulty: 'hard'
+      }
+    ]
   }
 ];
