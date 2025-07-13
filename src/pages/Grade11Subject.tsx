@@ -17,9 +17,9 @@ const Grade11Subject = () => {
   const chapters = getChaptersBySubject(subject);
   const totalQuestions = getTotalQuestionsBySubject(subject);
 
-  // Filter for Grade 11 chapters only
+  // Filter for Grade 11 chapters - look for chapters with IDs containing '11'
   const grade11Chapters = chapters.filter(chapter => 
-    chapter.id.includes('grade11') || chapter.name.includes('Grade 11')
+    chapter.id.includes('-11-') || chapter.id.includes('11')
   );
 
   const subjectNames: { [key: string]: string } = {
@@ -57,12 +57,12 @@ const Grade11Subject = () => {
       <div className="max-w-4xl mx-auto">
         <div className="mb-6">
           <Button 
-            onClick={() => navigate('/')} 
+            onClick={() => navigate('/grade11')} 
             variant="outline"
             className="mb-4"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
+            Back to Grade 11
           </Button>
           
           <div className="text-center">
@@ -124,6 +124,7 @@ const Grade11Subject = () => {
                       onClick={() => navigate(`/grade11/${subject}/${chapter.id}/easy`)}
                       variant="outline"
                       className="flex-1"
+                      disabled={getQuestionCountByDifficulty(chapter.questions, 'easy') === 0}
                     >
                       <Clock className="w-4 h-4 mr-2" />
                       Easy Quiz
@@ -132,6 +133,7 @@ const Grade11Subject = () => {
                       onClick={() => navigate(`/grade11/${subject}/${chapter.id}/medium`)}
                       variant="outline"
                       className="flex-1"
+                      disabled={getQuestionCountByDifficulty(chapter.questions, 'medium') === 0}
                     >
                       <Clock className="w-4 h-4 mr-2" />
                       Medium Quiz
@@ -139,6 +141,7 @@ const Grade11Subject = () => {
                     <Button 
                       onClick={() => navigate(`/grade11/${subject}/${chapter.id}/hard`)}
                       className="flex-1 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600"
+                      disabled={getQuestionCountByDifficulty(chapter.questions, 'hard') === 0}
                     >
                       <Clock className="w-4 h-4 mr-2" />
                       Hard Quiz
@@ -152,11 +155,11 @@ const Grade11Subject = () => {
               <CardContent className="text-center py-8">
                 <p className="text-gray-500">No Grade 11 chapters available for this subject yet.</p>
                 <Button 
-                  onClick={() => navigate('/')} 
+                  onClick={() => navigate('/grade11')} 
                   variant="outline"
                   className="mt-4"
                 >
-                  Back to Home
+                  Back to Grade 11
                 </Button>
               </CardContent>
             </Card>
