@@ -1,5 +1,5 @@
 
-import * as React from "react"
+import React, { useState, useEffect } from "react"
 
 type ToastProps = {
   id: string
@@ -159,9 +159,9 @@ function toast({ ...props }: Toast) {
 }
 
 function useToast() {
-  const [state, setState] = React.useState<State>(memoryState)
+  const [state, setState] = useState<State>(memoryState)
 
-  React.useEffect(() => {
+  useEffect(() => {
     listeners.push(setState)
     return () => {
       const index = listeners.indexOf(setState)
