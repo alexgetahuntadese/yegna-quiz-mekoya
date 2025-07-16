@@ -3,6 +3,7 @@ import React, { Suspense, lazy, useState, useEffect } from "react";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Toaster } from "@/components/ui/toaster";
 
 // Lazy load components
 const Index = lazy(() => import("./pages/Index"));
@@ -164,6 +165,7 @@ const App = () => {
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Suspense>
+            <Toaster />
           </BrowserRouter>
         </AuthProvider>
       </TooltipProvider>
