@@ -1,5 +1,6 @@
 
-import { useParams, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -7,8 +8,9 @@ import { ArrowLeft, BookOpen, Clock, Target } from 'lucide-react';
 import { getChaptersBySubject, getTotalQuestionsBySubject } from '@/data/questions';
 
 const Grade12Subject = () => {
-  const { subject } = useParams<{ subject: string }>();
-  const navigate = useNavigate();
+  // Get subject from window.location.pathname instead of useParams
+  const pathParts = window.location.pathname.split('/');
+  const subject = pathParts[pathParts.length - 1];
 
   if (!subject) {
     return <div>Subject not found</div>;
@@ -59,14 +61,15 @@ const Grade12Subject = () => {
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-100 p-4">
       <div className="max-w-4xl mx-auto">
         <div className="mb-6">
-          <Button 
-            onClick={() => navigate('/grade-12')} 
-            variant="outline"
-            className="mb-4"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Grade 12
-          </Button>
+          <Link to="/grade-12">
+            <Button 
+              variant="outline"
+              className="mb-4"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Grade 12
+            </Button>
+          </Link>
           
           <div className="text-center">
             <h1 className="text-3xl font-bold text-gray-800 mb-2">
@@ -123,29 +126,32 @@ const Grade12Subject = () => {
                   </div>
                   
                   <div className="flex gap-2">
-                    <Button 
-                      onClick={() => navigate(`/grade-12/${subject}/${chapter.id}/easy`)}
-                      variant="outline"
-                      className="flex-1"
-                    >
-                      <Clock className="w-4 h-4 mr-2" />
-                      Easy Quiz
-                    </Button>
-                    <Button 
-                      onClick={() => navigate(`/grade-12/${subject}/${chapter.id}/medium`)}
-                      variant="outline"
-                      className="flex-1"
-                    >
-                      <Clock className="w-4 h-4 mr-2" />
-                      Medium Quiz
-                    </Button>
-                    <Button 
-                      onClick={() => navigate(`/grade-12/${subject}/${chapter.id}/hard`)}
-                      className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
-                    >
-                      <Clock className="w-4 h-4 mr-2" />
-                      Hard Quiz
-                    </Button>
+                    <Link to={`/grade-12/${subject}/${chapter.id}/easy`} className="flex-1">
+                      <Button 
+                        variant="outline"
+                        className="w-full"
+                      >
+                        <Clock className="w-4 h-4 mr-2" />
+                        Easy Quiz
+                      </Button>
+                    </Link>
+                    <Link to={`/grade-12/${subject}/${chapter.id}/medium`} className="flex-1">
+                      <Button 
+                        variant="outline"
+                        className="w-full"
+                      >
+                        <Clock className="w-4 h-4 mr-2" />
+                        Medium Quiz
+                      </Button>
+                    </Link>
+                    <Link to={`/grade-12/${subject}/${chapter.id}/hard`} className="flex-1">
+                      <Button 
+                        className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                      >
+                        <Clock className="w-4 h-4 mr-2" />
+                        Hard Quiz
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
@@ -154,13 +160,14 @@ const Grade12Subject = () => {
             <Card>
               <CardContent className="text-center py-8">
                 <p className="text-gray-500">No Grade 12 chapters available for this subject yet.</p>
-                <Button 
-                  onClick={() => navigate('/grade-12')} 
-                  variant="outline"
-                  className="mt-4"
-                >
-                  Back to Grade 12
-                </Button>
+                <Link to="/grade-12">
+                  <Button 
+                    variant="outline"
+                    className="mt-4"
+                  >
+                    Back to Grade 12
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           )}
