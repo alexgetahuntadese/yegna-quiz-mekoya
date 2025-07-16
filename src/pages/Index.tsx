@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { BookOpen, Users, Trophy, Zap, Settings, LogOut } from 'lucide-react';
 import { AuthContext } from '@/App';
 import { useToast } from '@/hooks/use-toast';
+import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
   console.log('Index component rendering');
@@ -182,6 +183,8 @@ const Index = () => {
           </Card>
         </div>
       </main>
+      
+      <Toaster />
     </div>
   );
 };
