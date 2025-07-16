@@ -72,137 +72,205 @@ export const grade11MathematicsChapters: Chapter[] = [
   },
   {
     id: 'math-11-3',
-    name: 'Exponential and Logarithmic Functions',
-    description: 'Understanding exponential growth/decay and logarithmic relationships',
+    name: 'Matrices',
+    description: 'Matrix operations, properties and applications',
     questions: [
       {
         id: 'math-11-3-1',
-        question: 'What is log₂(8)?',
-        options: ['2', '3', '4', '6'],
-        correct: '3',
-        explanation: 'log₂(8) = 3 because 2³ = 8.',
+        question: 'What is the result of adding matrices A = [2, 3] and B = [1, 4]?',
+        options: ['[3, 7]', '[2, 12]', '[1, 1]', '[3, 1]'],
+        correct: '[3, 7]',
+        explanation: 'Matrix addition is done element by element: [2+1, 3+4] = [3, 7].',
         difficulty: 'easy',
-        topic: 'Basic Logarithms'
+        topic: 'Matrix Addition'
       },
       {
         id: 'math-11-3-2',
-        question: 'Solve: 2^x = 32',
-        options: ['x = 4', 'x = 5', 'x = 6', 'x = 16'],
-        correct: 'x = 5',
-        explanation: '2^5 = 32, so x = 5.',
+        question: 'What is the transpose of matrix A = [[1, 2], [3, 4]]?',
+        options: ['[[1, 3], [2, 4]]', '[[4, 3], [2, 1]]', '[[1, 2], [3, 4]]', '[[2, 1], [4, 3]]'],
+        correct: '[[1, 3], [2, 4]]',
+        explanation: 'The transpose of a matrix is obtained by interchanging rows and columns.',
         difficulty: 'medium',
-        topic: 'Exponential Equations'
+        topic: 'Matrix Transpose'
       },
       {
         id: 'math-11-3-3',
-        question: 'What is the inverse of f(x) = log₃(x)?',
-        options: ['f⁻¹(x) = 3^x', 'f⁻¹(x) = x³', 'f⁻¹(x) = 3x', 'f⁻¹(x) = x/3'],
-        correct: 'f⁻¹(x) = 3^x',
-        explanation: 'The inverse of a logarithmic function is an exponential function with the same base.',
+        question: 'If A = [[2, 1], [0, 3]] and B = [[1, 0], [2, 1]], what is AB?',
+        options: ['[[4, 1], [6, 3]]', '[[4, 1], [6, 1]]', '[[2, 1], [6, 3]]', '[[4, 0], [6, 3]]'],
+        correct: '[[4, 1], [6, 3]]',
+        explanation: 'Matrix multiplication: AB₁₁ = 2×1 + 1×2 = 4, AB₁₂ = 2×0 + 1×1 = 1, AB₂₁ = 0×1 + 3×2 = 6, AB₂₂ = 0×0 + 3×1 = 3.',
         difficulty: 'hard',
-        topic: 'Inverse Functions'
+        topic: 'Matrix Multiplication'
       }
     ]
   },
   {
     id: 'math-11-4',
-    name: 'Trigonometric Functions',
-    description: 'Sine, cosine, tangent and their applications',
+    name: 'Determinants and their Properties',
+    description: 'Calculating determinants and understanding their geometric meaning',
     questions: [
       {
         id: 'math-11-4-1',
-        question: 'What is sin(90°)?',
-        options: ['0', '1', '-1', '1/2'],
-        correct: '1',
-        explanation: 'sin(90°) = 1, which is the maximum value of the sine function.',
+        question: 'What is the determinant of the 2×2 matrix [[3, 2], [1, 4]]?',
+        options: ['10', '12', '14', '8'],
+        correct: '10',
+        explanation: 'For a 2×2 matrix [[a,b],[c,d]], det = ad - bc = 3×4 - 2×1 = 12 - 2 = 10.',
         difficulty: 'easy',
-        topic: 'Basic Trigonometry'
+        topic: '2×2 Determinants'
       },
       {
         id: 'math-11-4-2',
-        question: 'What is the period of f(x) = sin(2x)?',
-        options: ['π', '2π', 'π/2', '4π'],
-        correct: 'π',
-        explanation: 'The period of sin(bx) is 2π/b. For sin(2x), period = 2π/2 = π.',
+        question: 'If det(A) = 5 and det(B) = 3, what is det(AB)?',
+        options: ['15', '8', '2', '5/3'],
+        correct: '15',
+        explanation: 'The determinant of a product equals the product of determinants: det(AB) = det(A) × det(B) = 5 × 3 = 15.',
         difficulty: 'medium',
-        topic: 'Trigonometric Periods'
+        topic: 'Determinant Properties'
       },
       {
         id: 'math-11-4-3',
-        question: 'Solve: sin(x) = 1/2 for 0 ≤ x ≤ 2π',
-        options: ['x = π/6, 5π/6', 'x = π/4, 3π/4', 'x = π/3, 2π/3', 'x = π/2'],
-        correct: 'x = π/6, 5π/6',
-        explanation: 'sin(x) = 1/2 at x = π/6 (30°) and x = 5π/6 (150°) in [0, 2π].',
+        question: 'What is the determinant of [[1, 2, 3], [0, 4, 5], [0, 0, 6]]?',
+        options: ['24', '120', '30', '0'],
+        correct: '24',
+        explanation: 'For an upper triangular matrix, the determinant is the product of diagonal elements: 1 × 4 × 6 = 24.',
         difficulty: 'hard',
-        topic: 'Trigonometric Equations'
+        topic: '3×3 Determinants'
       }
     ]
   },
   {
     id: 'math-11-5',
-    name: 'Sequences and Series',
-    description: 'Arithmetic and geometric sequences and their sums',
+    name: 'Vectors',
+    description: 'Vector operations, properties and geometric applications',
     questions: [
       {
         id: 'math-11-5-1',
-        question: 'What is the common difference in the arithmetic sequence: 3, 7, 11, 15, ...?',
-        options: ['3', '4', '7', '11'],
-        correct: '4',
-        explanation: 'The common difference is 7 - 3 = 4 (or 11 - 7 = 4).',
+        question: 'What is the magnitude of vector v = (3, 4)?',
+        options: ['5', '7', '12', '25'],
+        correct: '5',
+        explanation: 'The magnitude of vector (a, b) is √(a² + b²) = √(3² + 4²) = √(9 + 16) = √25 = 5.',
         difficulty: 'easy',
-        topic: 'Arithmetic Sequences'
+        topic: 'Vector Magnitude'
       },
       {
         id: 'math-11-5-2',
-        question: 'What is the 10th term of the arithmetic sequence with first term a₁ = 2 and common difference d = 3?',
-        options: ['29', '32', '35', '27'],
-        correct: '29',
-        explanation: 'Using aₙ = a₁ + (n-1)d: a₁₀ = 2 + (10-1)×3 = 2 + 27 = 29.',
+        question: 'If u = (2, 3) and v = (1, -1), what is u + v?',
+        options: ['(3, 2)', '(1, 4)', '(2, -3)', '(3, -2)'],
+        correct: '(3, 2)',
+        explanation: 'Vector addition is component-wise: (2, 3) + (1, -1) = (2+1, 3+(-1)) = (3, 2).',
         difficulty: 'medium',
-        topic: 'Arithmetic Sequences'
+        topic: 'Vector Addition'
       },
       {
         id: 'math-11-5-3',
-        question: 'What is the sum of the first 5 terms of the geometric series: 2 + 6 + 18 + 54 + ...?',
-        options: ['162', '242', '202', '182'],
-        correct: '242',
-        explanation: 'First term a = 2, ratio r = 3. Sum = a(rⁿ-1)/(r-1) = 2(3⁵-1)/(3-1) = 2(242)/2 = 242.',
+        question: 'What is the dot product of vectors a = (2, 3) and b = (4, 1)?',
+        options: ['11', '8', '5', '14'],
+        correct: '11',
+        explanation: 'Dot product: a·b = (2)(4) + (3)(1) = 8 + 3 = 11.',
         difficulty: 'hard',
-        topic: 'Geometric Series'
+        topic: 'Dot Product'
       }
     ]
   },
   {
     id: 'math-11-6',
-    name: 'Coordinate Geometry',
-    description: 'Lines, circles, and conic sections in the coordinate plane',
+    name: 'Transformations of the Plane',
+    description: 'Geometric transformations including translations, rotations, and reflections',
     questions: [
       {
         id: 'math-11-6-1',
-        question: 'What is the slope of the line passing through points (2, 3) and (6, 11)?',
-        options: ['2', '1/2', '4', '8'],
-        correct: '2',
-        explanation: 'Slope = (y₂ - y₁)/(x₂ - x₁) = (11 - 3)/(6 - 2) = 8/4 = 2.',
+        question: 'What is the image of point (2, 3) under translation by vector (1, -2)?',
+        options: ['(3, 1)', '(1, 5)', '(2, -6)', '(3, -1)'],
+        correct: '(3, 1)',
+        explanation: 'Translation adds the translation vector: (2, 3) + (1, -2) = (2+1, 3+(-2)) = (3, 1).',
         difficulty: 'easy',
-        topic: 'Linear Equations'
+        topic: 'Translation'
       },
       {
         id: 'math-11-6-2',
-        question: 'What is the equation of the circle with center (3, 4) and radius 5?',
-        options: ['(x-3)² + (y-4)² = 25', '(x+3)² + (y+4)² = 25', '(x-3)² + (y-4)² = 5', 'x² + y² = 25'],
-        correct: '(x-3)² + (y-4)² = 25',
-        explanation: 'The standard form of a circle is (x-h)² + (y-k)² = r² where (h,k) is the center and r is the radius.',
+        question: 'What is the image of point (3, 0) under rotation of 90° counterclockwise about the origin?',
+        options: ['(0, 3)', '(-3, 0)', '(0, -3)', '(3, 0)'],
+        correct: '(0, 3)',
+        explanation: 'Rotation of 90° counterclockwise transforms (x, y) to (-y, x): (3, 0) → (0, 3).',
         difficulty: 'medium',
-        topic: 'Circle Equations'
+        topic: 'Rotation'
       },
       {
         id: 'math-11-6-3',
-        question: 'What is the distance between points (-1, 2) and (3, 5)?',
-        options: ['5', '√7', '7', '25'],
-        correct: '5',
-        explanation: 'Distance = √[(x₂-x₁)² + (y₂-y₁)²] = √[(3-(-1))² + (5-2)²] = √[16 + 9] = √25 = 5.',
+        question: 'What is the image of point (4, 2) under reflection across the x-axis?',
+        options: ['(4, -2)', '(-4, 2)', '(2, 4)', '(-4, -2)'],
+        correct: '(4, -2)',
+        explanation: 'Reflection across the x-axis changes the sign of the y-coordinate: (4, 2) → (4, -2).',
         difficulty: 'hard',
-        topic: 'Distance Formula'
+        topic: 'Reflection'
+      }
+    ]
+  },
+  {
+    id: 'math-11-7',
+    name: 'Statistics',
+    description: 'Data analysis, measures of central tendency and dispersion',
+    questions: [
+      {
+        id: 'math-11-7-1',
+        question: 'What is the mean of the data set: 2, 4, 6, 8, 10?',
+        options: ['5', '6', '7', '8'],
+        correct: '6',
+        explanation: 'Mean = (2 + 4 + 6 + 8 + 10) / 5 = 30 / 5 = 6.',
+        difficulty: 'easy',
+        topic: 'Mean'
+      },
+      {
+        id: 'math-11-7-2',
+        question: 'What is the median of the data set: 1, 3, 5, 7, 9, 11?',
+        options: ['5', '6', '7', '8'],
+        correct: '6',
+        explanation: 'For an even number of values, the median is the average of the two middle values: (5 + 7) / 2 = 6.',
+        difficulty: 'medium',
+        topic: 'Median'
+      },
+      {
+        id: 'math-11-7-3',
+        question: 'What is the standard deviation of the data set: 2, 4, 6 (population)?',
+        options: ['√(8/3)', '2', '√8', '4/3'],
+        correct: '√(8/3)',
+        explanation: 'Mean = 4. Variance = [(2-4)² + (4-4)² + (6-4)²]/3 = [4 + 0 + 4]/3 = 8/3. Standard deviation = √(8/3).',
+        difficulty: 'hard',
+        topic: 'Standard Deviation'
+      }
+    ]
+  },
+  {
+    id: 'math-11-8',
+    name: 'Probability',
+    description: 'Basic probability concepts, conditional probability and probability distributions',
+    questions: [
+      {
+        id: 'math-11-8-1',
+        question: 'What is the probability of getting a head when flipping a fair coin?',
+        options: ['1/4', '1/3', '1/2', '2/3'],
+        correct: '1/2',
+        explanation: 'A fair coin has two equally likely outcomes: heads or tails. P(Head) = 1/2.',
+        difficulty: 'easy',
+        topic: 'Basic Probability'
+      },
+      {
+        id: 'math-11-8-2',
+        question: 'If P(A) = 0.3 and P(B) = 0.4, and A and B are independent, what is P(A ∩ B)?',
+        options: ['0.12', '0.7', '0.1', '0.35'],
+        correct: '0.12',
+        explanation: 'For independent events, P(A ∩ B) = P(A) × P(B) = 0.3 × 0.4 = 0.12.',
+        difficulty: 'medium',
+        topic: 'Independent Events'
+      },
+      {
+        id: 'math-11-8-3',
+        question: 'In a bag with 3 red and 2 blue balls, what is P(Red|first ball drawn is Red)?',
+        options: ['1/2', '2/4', '3/5', '2/3'],
+        correct: '1/2',
+        explanation: 'After drawing one red ball, there are 2 red and 2 blue balls left. P(Red) = 2/4 = 1/2.',
+        difficulty: 'hard',
+        topic: 'Conditional Probability'
       }
     ]
   }
