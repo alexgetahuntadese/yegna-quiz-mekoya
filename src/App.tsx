@@ -1,3 +1,4 @@
+
 import React, { Suspense, lazy, useState, useEffect, createContext } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -93,79 +94,85 @@ const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) =
   return <>{children}</>;
 };
 
+const AppContent = () => {
+  return (
+    <BrowserRouter>
+      <Suspense fallback={<LoadingSpinner />}>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          
+          {/* Protected routes */}
+          <Route path="/" element={
+            <ProtectedRoute>
+              <Index />
+            </ProtectedRoute>
+          } />
+          <Route path="/grade9" element={
+            <ProtectedRoute>
+              <Grade9 />
+            </ProtectedRoute>
+          } />
+          <Route path="/grade10" element={
+            <ProtectedRoute>
+              <Grade10 />
+            </ProtectedRoute>
+          } />
+          <Route path="/grade11" element={
+            <ProtectedRoute>
+              <Grade11 />
+            </ProtectedRoute>
+          } />
+          <Route path="/grade-12" element={
+            <ProtectedRoute>
+              <Grade12 />
+            </ProtectedRoute>
+          } />
+          <Route path="/:grade/:subject" element={
+            <ProtectedRoute>
+              <Subject />
+            </ProtectedRoute>
+          } />
+          <Route path="/:grade/:subject/:chapter/:difficulty" element={
+            <ProtectedRoute>
+              <Quiz />
+            </ProtectedRoute>
+          } />
+          <Route path="/grade11/:subject" element={
+            <ProtectedRoute>
+              <Grade11Subject />
+            </ProtectedRoute>
+          } />
+          <Route path="/grade11/:subject/:chapter/:difficulty" element={
+            <ProtectedRoute>
+              <Grade11Quiz />
+            </ProtectedRoute>
+          } />
+          <Route path="/grade-12/:subject" element={
+            <ProtectedRoute>
+              <Grade12Subject />
+            </ProtectedRoute>
+          } />
+          <Route path="/grade-12/:subject/:chapter/:difficulty" element={
+            <ProtectedRoute>
+              <Grade12Quiz />
+            </ProtectedRoute>
+          } />
+          
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+      <Toaster />
+    </BrowserRouter>
+  );
+};
+
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <AuthProvider>
-          <BrowserRouter>
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<SignUp />} />
-                
-                {/* Protected routes */}
-                <Route path="/" element={
-                  <ProtectedRoute>
-                    <Index />
-                  </ProtectedRoute>
-                } />
-                <Route path="/grade9" element={
-                  <ProtectedRoute>
-                    <Grade9 />
-                  </ProtectedRoute>
-                } />
-                <Route path="/grade10" element={
-                  <ProtectedRoute>
-                    <Grade10 />
-                  </ProtectedRoute>
-                } />
-                <Route path="/grade11" element={
-                  <ProtectedRoute>
-                    <Grade11 />
-                  </ProtectedRoute>
-                } />
-                <Route path="/grade-12" element={
-                  <ProtectedRoute>
-                    <Grade12 />
-                  </ProtectedRoute>
-                } />
-                <Route path="/:grade/:subject" element={
-                  <ProtectedRoute>
-                    <Subject />
-                  </ProtectedRoute>
-                } />
-                <Route path="/:grade/:subject/:chapter/:difficulty" element={
-                  <ProtectedRoute>
-                    <Quiz />
-                  </ProtectedRoute>
-                } />
-                <Route path="/grade11/:subject" element={
-                  <ProtectedRoute>
-                    <Grade11Subject />
-                  </ProtectedRoute>
-                } />
-                <Route path="/grade11/:subject/:chapter/:difficulty" element={
-                  <ProtectedRoute>
-                    <Grade11Quiz />
-                  </ProtectedRoute>
-                } />
-                <Route path="/grade-12/:subject" element={
-                  <ProtectedRoute>
-                    <Grade12Subject />
-                  </ProtectedRoute>
-                } />
-                <Route path="/grade-12/:subject/:chapter/:difficulty" element={
-                  <ProtectedRoute>
-                    <Grade12Quiz />
-                  </ProtectedRoute>
-                } />
-                
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </Suspense>
-            <Toaster />
-          </BrowserRouter>
+          <AppContent />
         </AuthProvider>
       </TooltipProvider>
     </QueryClientProvider>
