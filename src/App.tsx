@@ -163,7 +163,7 @@ const AppRoutes: React.FC = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
-      <Toaster />
+      {/* <Toaster /> */}
     </>
   );
 };
