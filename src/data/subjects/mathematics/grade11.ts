@@ -1,4 +1,3 @@
-
 import { Chapter } from '../../types';
 
 export const grade11MathematicsChapters: Chapter[] = [
@@ -7,17 +6,100 @@ export const grade11MathematicsChapters: Chapter[] = [
     name: 'Relations and Functions',
     description: 'Understanding relations and functions, their properties and applications',
     questions: [
+      // Easy Questions (10)
       {
         id: 'math-11-1-1',
         question: 'What is the domain of the function f(x) = √(x-2)?',
         options: ['x ≥ 2', 'x ≤ 2', 'x > 2', 'All real numbers'],
         correct: 'x ≥ 2',
         explanation: 'For the square root to be defined, the expression under the root must be non-negative: x-2 ≥ 0, so x ≥ 2.',
-        difficulty: 'medium',
+        difficulty: 'easy',
         topic: 'Domain and Range'
       },
       {
         id: 'math-11-1-2',
+        question: 'Which represents a one-to-one function?',
+        options: ['f(x) = x²', 'f(x) = |x|', 'f(x) = 2x + 1', 'f(x) = sin(x)'],
+        correct: 'f(x) = 2x + 1',
+        explanation: 'A linear function with non-zero slope is always one-to-one (injective).',
+        difficulty: 'easy',
+        topic: 'Function Types'
+      },
+      {
+        id: 'math-11-1-3',
+        question: 'What is the range of f(x) = x² for x ∈ ℝ?',
+        options: ['[0, ∞)', '(-∞, ∞)', '[1, ∞)', '(-∞, 0]'],
+        correct: '[0, ∞)',
+        explanation: 'Since x² is always non-negative for real numbers, the range is [0, ∞).',
+        difficulty: 'easy',
+        topic: 'Domain and Range'
+      },
+      {
+        id: 'math-11-1-4',
+        question: 'If f(x) = 3x + 2, what is f(0)?',
+        options: ['0', '2', '3', '5'],
+        correct: '2',
+        explanation: 'f(0) = 3(0) + 2 = 0 + 2 = 2.',
+        difficulty: 'easy',
+        topic: 'Function Evaluation'
+      },
+      {
+        id: 'math-11-1-5',
+        question: 'What is the inverse of f(x) = x + 5?',
+        options: ['f⁻¹(x) = x - 5', 'f⁻¹(x) = x + 5', 'f⁻¹(x) = 5 - x', 'f⁻¹(x) = 1/(x + 5)'],
+        correct: 'f⁻¹(x) = x - 5',
+        explanation: 'To find the inverse, replace f(x) with y, swap x and y, then solve for y: x = y + 5, so y = x - 5.',
+        difficulty: 'easy',
+        topic: 'Inverse Functions'
+      },
+      {
+        id: 'math-11-1-6',
+        question: 'Which of the following is NOT a function?',
+        options: ['x = y²', 'y = x²', 'y = 2x + 1', 'y = |x|'],
+        correct: 'x = y²',
+        explanation: 'x = y² fails the vertical line test; for one x-value, there can be two y-values.',
+        difficulty: 'easy',
+        topic: 'Function Definition'
+      },
+      {
+        id: 'math-11-1-7',
+        question: 'What is the domain of f(x) = 1/x?',
+        options: ['All real numbers', 'x ≠ 0', 'x > 0', 'x ≥ 0'],
+        correct: 'x ≠ 0',
+        explanation: 'Division by zero is undefined, so x cannot equal 0.',
+        difficulty: 'easy',
+        topic: 'Domain and Range'
+      },
+      {
+        id: 'math-11-1-8',
+        question: 'If f(x) = x², what is f(-3)?',
+        options: ['-9', '9', '6', '-6'],
+        correct: '9',
+        explanation: 'f(-3) = (-3)² = 9.',
+        difficulty: 'easy',
+        topic: 'Function Evaluation'
+      },
+      {
+        id: 'math-11-1-9',
+        question: 'What is the y-intercept of f(x) = 2x - 4?',
+        options: ['2', '-4', '4', '0'],
+        correct: '-4',
+        explanation: 'The y-intercept occurs when x = 0: f(0) = 2(0) - 4 = -4.',
+        difficulty: 'easy',
+        topic: 'Function Properties'
+      },
+      {
+        id: 'math-11-1-10',
+        question: 'Which function is even?',
+        options: ['f(x) = x³', 'f(x) = x² + 1', 'f(x) = x + 1', 'f(x) = x²+ x'],
+        correct: 'f(x) = x² + 1',
+        explanation: 'A function is even if f(-x) = f(x). For f(x) = x² + 1: f(-x) = (-x)² + 1 = x² + 1 = f(x).',
+        difficulty: 'easy',
+        topic: 'Function Symmetry'
+      },
+      // Medium Questions (10)
+      {
+        id: 'math-11-1-11',
         question: 'If f(x) = 2x + 3 and g(x) = x², what is (f∘g)(x)?',
         options: ['2x² + 3', '2x + 3x²', '(2x + 3)²', '2(x + 3)²'],
         correct: '2x² + 3',
@@ -26,251 +108,176 @@ export const grade11MathematicsChapters: Chapter[] = [
         topic: 'Function Composition'
       },
       {
-        id: 'math-11-1-3',
-        question: 'Which represents a one-to-one function?',
-        options: ['f(x) = x²', 'f(x) = |x|', 'f(x) = 2x + 1', 'f(x) = sin(x)'],
-        correct: 'f(x) = 2x + 1',
-        explanation: 'A linear function with non-zero slope is always one-to-one (injective).',
-        difficulty: 'easy',
-        topic: 'Function Types'
-      }
-    ]
-  },
-  {
-    id: 'math-11-2',
-    name: 'Rational Expression and Rational Functions',
-    description: 'Working with rational expressions, equations and their graphs',
-    questions: [
-      {
-        id: 'math-11-2-1',
-        question: 'Simplify: (x² - 4)/(x + 2)',
-        options: ['x - 2', 'x + 2', 'x² - 2', '(x - 2)(x + 2)'],
-        correct: 'x - 2',
-        explanation: 'Factor numerator: (x² - 4) = (x - 2)(x + 2). Cancel common factor (x + 2).',
-        difficulty: 'easy',
-        topic: 'Simplifying Rational Expressions'
-      },
-      {
-        id: 'math-11-2-2',
-        question: 'What are the vertical asymptotes of f(x) = 1/(x² - 9)?',
-        options: ['x = 3', 'x = -3', 'x = ±3', 'No vertical asymptotes'],
-        correct: 'x = ±3',
-        explanation: 'Vertical asymptotes occur where denominator = 0: x² - 9 = 0, so x = ±3.',
+        id: 'math-11-1-12',
+        question: 'What is the inverse of f(x) = 2x - 6?',
+        options: ['f⁻¹(x) = (x + 6)/2', 'f⁻¹(x) = (x - 6)/2', 'f⁻¹(x) = 2x + 6', 'f⁻¹(x) = x/2 + 3'],
+        correct: 'f⁻¹(x) = (x + 6)/2',
+        explanation: 'Let y = 2x - 6, then x = 2y - 6. Solving for y: x + 6 = 2y, so y = (x + 6)/2.',
         difficulty: 'medium',
-        topic: 'Asymptotes'
+        topic: 'Inverse Functions'
       },
       {
-        id: 'math-11-2-3',
-        question: 'Solve: 1/x + 1/(x+1) = 2/3',
-        options: ['x = 1, x = 2', 'x = 1/2, x = 2', 'x = 1, x = 1/2', 'x = 2, x = 3'],
-        correct: 'x = 1/2, x = 2',
-        explanation: 'Multiply through by common denominator 3x(x+1) and solve the resulting quadratic.',
-        difficulty: 'hard',
-        topic: 'Rational Equations'
-      }
-    ]
-  },
-  {
-    id: 'math-11-3',
-    name: 'Matrices',
-    description: 'Matrix operations, properties and applications',
-    questions: [
-      {
-        id: 'math-11-3-1',
-        question: 'What is the result of adding matrices A = [2, 3] and B = [1, 4]?',
-        options: ['[3, 7]', '[2, 12]', '[1, 1]', '[3, 1]'],
-        correct: '[3, 7]',
-        explanation: 'Matrix addition is done element by element: [2+1, 3+4] = [3, 7].',
-        difficulty: 'easy',
-        topic: 'Matrix Addition'
-      },
-      {
-        id: 'math-11-3-2',
-        question: 'What is the transpose of matrix A = [[1, 2], [3, 4]]?',
-        options: ['[[1, 3], [2, 4]]', '[[4, 3], [2, 1]]', '[[1, 2], [3, 4]]', '[[2, 1], [4, 3]]'],
-        correct: '[[1, 3], [2, 4]]',
-        explanation: 'The transpose of a matrix is obtained by interchanging rows and columns.',
+        id: 'math-11-1-13',
+        question: 'If g(x) = x + 1 and h(x) = x - 1, what is (g∘h)(x)?',
+        options: ['x', '2x', 'x²', 'x + 2'],
+        correct: 'x',
+        explanation: '(g∘h)(x) = g(h(x)) = g(x - 1) = (x - 1) + 1 = x.',
         difficulty: 'medium',
-        topic: 'Matrix Transpose'
+        topic: 'Function Composition'
       },
       {
-        id: 'math-11-3-3',
-        question: 'If A = [[2, 1], [0, 3]] and B = [[1, 0], [2, 1]], what is AB?',
-        options: ['[[4, 1], [6, 3]]', '[[4, 1], [6, 1]]', '[[2, 1], [6, 3]]', '[[4, 0], [6, 3]]'],
-        correct: '[[4, 1], [6, 3]]',
-        explanation: 'Matrix multiplication: AB₁₁ = 2×1 + 1×2 = 4, AB₁₂ = 2×0 + 1×1 = 1, AB₂₁ = 0×1 + 3×2 = 6, AB₂₂ = 0×0 + 3×1 = 3.',
-        difficulty: 'hard',
-        topic: 'Matrix Multiplication'
-      }
-    ]
-  },
-  {
-    id: 'math-11-4',
-    name: 'Determinants and their Properties',
-    description: 'Calculating determinants and understanding their geometric meaning',
-    questions: [
-      {
-        id: 'math-11-4-1',
-        question: 'What is the determinant of the 2×2 matrix [[3, 2], [1, 4]]?',
-        options: ['10', '12', '14', '8'],
-        correct: '10',
-        explanation: 'For a 2×2 matrix [[a,b],[c,d]], det = ad - bc = 3×4 - 2×1 = 12 - 2 = 10.',
-        difficulty: 'easy',
-        topic: '2×2 Determinants'
-      },
-      {
-        id: 'math-11-4-2',
-        question: 'If det(A) = 5 and det(B) = 3, what is det(AB)?',
-        options: ['15', '8', '2', '5/3'],
-        correct: '15',
-        explanation: 'The determinant of a product equals the product of determinants: det(AB) = det(A) × det(B) = 5 × 3 = 15.',
+        id: 'math-11-1-14',
+        question: 'What is the domain of f(x) = √(4 - x²)?',
+        options: ['[-2, 2]', '(-2, 2)', '[0, 2]', '(-∞, ∞)'],
+        correct: '[-2, 2]',
+        explanation: 'For the square root to be defined: 4 - x² ≥ 0, so x² ≤ 4, which gives -2 ≤ x ≤ 2.',
         difficulty: 'medium',
-        topic: 'Determinant Properties'
+        topic: 'Domain and Range'
       },
       {
-        id: 'math-11-4-3',
-        question: 'What is the determinant of [[1, 2, 3], [0, 4, 5], [0, 0, 6]]?',
-        options: ['24', '120', '30', '0'],
-        correct: '24',
-        explanation: 'For an upper triangular matrix, the determinant is the product of diagonal elements: 1 × 4 × 6 = 24.',
-        difficulty: 'hard',
-        topic: '3×3 Determinants'
-      }
-    ]
-  },
-  {
-    id: 'math-11-5',
-    name: 'Vectors',
-    description: 'Vector operations, properties and geometric applications',
-    questions: [
-      {
-        id: 'math-11-5-1',
-        question: 'What is the magnitude of vector v = (3, 4)?',
-        options: ['5', '7', '12', '25'],
-        correct: '5',
-        explanation: 'The magnitude of vector (a, b) is √(a² + b²) = √(3² + 4²) = √(9 + 16) = √25 = 5.',
-        difficulty: 'easy',
-        topic: 'Vector Magnitude'
-      },
-      {
-        id: 'math-11-5-2',
-        question: 'If u = (2, 3) and v = (1, -1), what is u + v?',
-        options: ['(3, 2)', '(1, 4)', '(2, -3)', '(3, -2)'],
-        correct: '(3, 2)',
-        explanation: 'Vector addition is component-wise: (2, 3) + (1, -1) = (2+1, 3+(-1)) = (3, 2).',
+        id: 'math-11-1-15',
+        question: 'If f(x) = x² - 4x + 3, what is the vertex form?',
+        options: ['f(x) = (x - 2)² - 1', 'f(x) = (x - 2)² + 1', 'f(x) = (x + 2)² - 1', 'f(x) = (x - 1)² - 2'],
+        correct: 'f(x) = (x - 2)² - 1',
+        explanation: 'Complete the square: f(x) = x² - 4x + 3 = (x - 2)² - 4 + 3 = (x - 2)² - 1.',
         difficulty: 'medium',
-        topic: 'Vector Addition'
+        topic: 'Quadratic Functions'
       },
       {
-        id: 'math-11-5-3',
-        question: 'What is the dot product of vectors a = (2, 3) and b = (4, 1)?',
-        options: ['11', '8', '5', '14'],
-        correct: '11',
-        explanation: 'Dot product: a·b = (2)(4) + (3)(1) = 8 + 3 = 11.',
-        difficulty: 'hard',
-        topic: 'Dot Product'
-      }
-    ]
-  },
-  {
-    id: 'math-11-6',
-    name: 'Transformations of the Plane',
-    description: 'Geometric transformations including translations, rotations, and reflections',
-    questions: [
-      {
-        id: 'math-11-6-1',
-        question: 'What is the image of point (2, 3) under translation by vector (1, -2)?',
-        options: ['(3, 1)', '(1, 5)', '(2, -6)', '(3, -1)'],
-        correct: '(3, 1)',
-        explanation: 'Translation adds the translation vector: (2, 3) + (1, -2) = (2+1, 3+(-2)) = (3, 1).',
-        difficulty: 'easy',
-        topic: 'Translation'
-      },
-      {
-        id: 'math-11-6-2',
-        question: 'What is the image of point (3, 0) under rotation of 90° counterclockwise about the origin?',
-        options: ['(0, 3)', '(-3, 0)', '(0, -3)', '(3, 0)'],
-        correct: '(0, 3)',
-        explanation: 'Rotation of 90° counterclockwise transforms (x, y) to (-y, x): (3, 0) → (0, 3).',
+        id: 'math-11-1-16',
+        question: 'What is the range of f(x) = -x² + 4?',
+        options: ['(-∞, 4]', '[4, ∞)', '[0, 4]', '(-∞, ∞)'],
+        correct: '(-∞, 4]',
+        explanation: 'Since the parabola opens downward with vertex at (0, 4), the maximum value is 4.',
         difficulty: 'medium',
-        topic: 'Rotation'
+        topic: 'Domain and Range'
       },
       {
-        id: 'math-11-6-3',
-        question: 'What is the image of point (4, 2) under reflection across the x-axis?',
-        options: ['(4, -2)', '(-4, 2)', '(2, 4)', '(-4, -2)'],
-        correct: '(4, -2)',
-        explanation: 'Reflection across the x-axis changes the sign of the y-coordinate: (4, 2) → (4, -2).',
-        difficulty: 'hard',
-        topic: 'Reflection'
-      }
-    ]
-  },
-  {
-    id: 'math-11-7',
-    name: 'Statistics',
-    description: 'Data analysis, measures of central tendency and dispersion',
-    questions: [
-      {
-        id: 'math-11-7-1',
-        question: 'What is the mean of the data set: 2, 4, 6, 8, 10?',
-        options: ['5', '6', '7', '8'],
-        correct: '6',
-        explanation: 'Mean = (2 + 4 + 6 + 8 + 10) / 5 = 30 / 5 = 6.',
-        difficulty: 'easy',
-        topic: 'Mean'
-      },
-      {
-        id: 'math-11-7-2',
-        question: 'What is the median of the data set: 1, 3, 5, 7, 9, 11?',
-        options: ['5', '6', '7', '8'],
-        correct: '6',
-        explanation: 'For an even number of values, the median is the average of the two middle values: (5 + 7) / 2 = 6.',
+        id: 'math-11-1-17',
+        question: 'If f(x) = 3x + 1 and f(a) = 10, what is a?',
+        options: ['3', '4', '9', '11'],
+        correct: '3',
+        explanation: 'f(a) = 3a + 1 = 10, so 3a = 9, therefore a = 3.',
         difficulty: 'medium',
-        topic: 'Median'
+        topic: 'Function Evaluation'
       },
       {
-        id: 'math-11-7-3',
-        question: 'What is the standard deviation of the data set: 2, 4, 6 (population)?',
-        options: ['√(8/3)', '2', '√8', '4/3'],
-        correct: '√(8/3)',
-        explanation: 'Mean = 4. Variance = [(2-4)² + (4-4)² + (6-4)²]/3 = [4 + 0 + 4]/3 = 8/3. Standard deviation = √(8/3).',
-        difficulty: 'hard',
-        topic: 'Standard Deviation'
-      }
-    ]
-  },
-  {
-    id: 'math-11-8',
-    name: 'Probability',
-    description: 'Basic probability concepts, conditional probability and probability distributions',
-    questions: [
-      {
-        id: 'math-11-8-1',
-        question: 'What is the probability of getting a head when flipping a fair coin?',
-        options: ['1/4', '1/3', '1/2', '2/3'],
-        correct: '1/2',
-        explanation: 'A fair coin has two equally likely outcomes: heads or tails. P(Head) = 1/2.',
-        difficulty: 'easy',
-        topic: 'Basic Probability'
-      },
-      {
-        id: 'math-11-8-2',
-        question: 'If P(A) = 0.3 and P(B) = 0.4, and A and B are independent, what is P(A ∩ B)?',
-        options: ['0.12', '0.7', '0.1', '0.35'],
-        correct: '0.12',
-        explanation: 'For independent events, P(A ∩ B) = P(A) × P(B) = 0.3 × 0.4 = 0.12.',
+        id: 'math-11-1-18',
+        question: 'What is the domain of f(x) = 1/(x² - 9)?',
+        options: ['x ≠ ±3', 'x ≠ 3', 'x ≠ -3', 'All real numbers'],
+        correct: 'x ≠ ±3',
+        explanation: 'The denominator cannot be zero: x² - 9 ≠ 0, so x ≠ ±3.',
         difficulty: 'medium',
-        topic: 'Independent Events'
+        topic: 'Domain and Range'
       },
       {
-        id: 'math-11-8-3',
-        question: 'In a bag with 3 red and 2 blue balls, what is P(Red|first ball drawn is Red)?',
-        options: ['1/2', '2/4', '3/5', '2/3'],
-        correct: '1/2',
-        explanation: 'After drawing one red ball, there are 2 red and 2 blue balls left. P(Red) = 2/4 = 1/2.',
+        id: 'math-11-1-19',
+        question: 'If f(x) = |x - 3|, what is f(1) + f(5)?',
+        options: ['2', '4', '6', '8'],
+        correct: '4',
+        explanation: 'f(1) = |1 - 3| = |-2| = 2, f(5) = |5 - 3| = |2| = 2, so f(1) + f(5) = 4.',
+        difficulty: 'medium',
+        topic: 'Absolute Value Functions'
+      },
+      {
+        id: 'math-11-1-20',
+        question: 'What is the inverse of f(x) = x³?',
+        options: ['f⁻¹(x) = ∛x', 'f⁻¹(x) = x^(1/3)', 'f⁻¹(x) = x³', 'Both A and B'],
+        correct: 'Both A and B',
+        explanation: 'The inverse of f(x) = x³ is f⁻¹(x) = ∛x = x^(1/3).',
+        difficulty: 'medium',
+        topic: 'Inverse Functions'
+      },
+      // Hard Questions (10)
+      {
+        id: 'math-11-1-21',
+        question: 'If f(x) = (x² - 1)/(x + 1) for x ≠ -1, what is the simplified form?',
+        options: ['x - 1', 'x + 1', 'x² - 1', '(x - 1)/(x + 1)'],
+        correct: 'x - 1',
+        explanation: 'Factor numerator: (x² - 1) = (x - 1)(x + 1). Cancel (x + 1): f(x) = x - 1 for x ≠ -1.',
         difficulty: 'hard',
-        topic: 'Conditional Probability'
+        topic: 'Rational Functions'
+      },
+      {
+        id: 'math-11-1-22',
+        question: 'If f(g(x)) = 2x + 1 and g(x) = x - 3, what is f(x)?',
+        options: ['f(x) = 2x + 7', 'f(x) = 2x - 5', 'f(x) = 2x + 1', 'f(x) = x + 4'],
+        correct: 'f(x) = 2x + 7',
+        explanation: 'Let u = g(x) = x - 3, so x = u + 3. Then f(u) = 2(u + 3) + 1 = 2u + 7, so f(x) = 2x + 7.',
+        difficulty: 'hard',
+        topic: 'Function Composition'
+      },
+      {
+        id: 'math-11-1-23',
+        question: 'What is the domain of f(x) = ln(x² - 4)?',
+        options: ['x ∈ (-∞, -2) ∪ (2, ∞)', 'x ∈ [-2, 2]', 'x ∈ (-2, 2)', 'x ∈ (-∞, ∞)'],
+        correct: 'x ∈ (-∞, -2) ∪ (2, ∞)',
+        explanation: 'For ln to be defined, x² - 4 > 0, so x² > 4, which gives x < -2 or x > 2.',
+        difficulty: 'hard',
+        topic: 'Logarithmic Functions'
+      },
+      {
+        id: 'math-11-1-24',
+        question: 'If f(x) = (ax + b)/(cx + d) and f(f(x)) = x, what condition must be satisfied?',
+        options: ['a + d = 0', 'ad - bc = -1', 'a = d and b = c = 0', 'ad + bc = 0'],
+        correct: 'a + d = 0',
+        explanation: 'For f(f(x)) = x (involution), the function must satisfy a + d = 0.',
+        difficulty: 'hard',
+        topic: 'Function Properties'
+      },
+      {
+        id: 'math-11-1-25',
+        question: 'What is the range of f(x) = 1/(x² + 1)?',
+        options: ['(0, 1]', '[0, 1]', '(0, 1)', '[1, ∞)'],
+        correct: '(0, 1]',
+        explanation: 'Since x² + 1 ≥ 1 for all real x, we have 1/(x² + 1) ≤ 1. As x → ∞, f(x) → 0, so range is (0, 1].',
+        difficulty: 'hard',
+        topic: 'Domain and Range'
+      },
+      {
+        id: 'math-11-1-26',
+        question: 'If f(x) = x/(x-1) and g(x) = 1/x, what is (f∘g)(x)?',
+        options: ['1/(1-x)', 'x/(x-1)', '1/(x-1)', 'x/(1-x)'],
+        correct: '1/(1-x)',
+        explanation: '(f∘g)(x) = f(g(x)) = f(1/x) = (1/x)/((1/x) - 1) = (1/x)/(1-x)/x = 1/(1-x).',
+        difficulty: 'hard',
+        topic: 'Function Composition'
+      },
+      {
+        id: 'math-11-1-27',
+        question: 'What is the inverse of f(x) = (2x + 1)/(x - 3)?',
+        options: ['f⁻¹(x) = (3x + 1)/(x - 2)', 'f⁻¹(x) = (x - 1)/(2x + 3)', 'f⁻¹(x) = (2x - 1)/(x + 3)', 'f⁻¹(x) = (x + 1)/(2x - 3)'],
+        correct: 'f⁻¹(x) = (3x + 1)/(x - 2)',
+        explanation: 'Let y = (2x + 1)/(x - 3). Solve for x: y(x - 3) = 2x + 1, yx - 3y = 2x + 1, x(y - 2) = 3y + 1, x = (3y + 1)/(y - 2).',
+        difficulty: 'hard',
+        topic: 'Inverse Functions'
+      },
+      {
+        id: 'math-11-1-28',
+        question: 'If f(x) = x² - 2x + 1, for what values of x is f(x) = f(2x)?',
+        options: ['x = 0, x = 1', 'x = 0, x = 3', 'x = 1, x = 3', 'x = 0, x = 2'],
+        correct: 'x = 0, x = 3',
+        explanation: 'f(x) = (x-1)², f(2x) = (2x-1)². Setting equal: (x-1)² = (2x-1)², so x-1 = ±(2x-1). This gives x = 0 or x = 3.',
+        difficulty: 'hard',
+        topic: 'Function Equations'
+      },
+      {
+        id: 'math-11-1-29',
+        question: 'What is the maximum value of f(x) = sin(x) + cos(x)?',
+        options: ['1', '√2', '2', '√3'],
+        correct: '√2',
+        explanation: 'f(x) = sin(x) + cos(x) = √2 sin(x + π/4). Maximum value is √2.',
+        difficulty: 'hard',
+        topic: 'Trigonometric Functions'
+      },
+      {
+        id: 'math-11-1-30',
+        question: 'If f(x) = e^x and g(x) = ln(x), what is (f∘g)(x) for x > 0?',
+        options: ['x', 'e^x', 'ln(x)', '1'],
+        correct: 'x',
+        explanation: '(f∘g)(x) = f(g(x)) = f(ln(x)) = e^(ln(x)) = x for x > 0.',
+        difficulty: 'hard',
+        topic: 'Exponential and Logarithmic Functions'
       }
     ]
   }
