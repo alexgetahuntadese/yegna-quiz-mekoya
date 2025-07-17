@@ -15,7 +15,7 @@ import { physicalEducationChapters } from './subjects/physical-education';
 import { informationTechnologyChapters } from './subjects/information-technology';
 import { nationalLanguageChapters } from './subjects/national-language';
 import { agricultureChapters } from './subjects/agriculture';
-import { validateChapter, validateQuestionsArray, logValidationResults } from '@/utils/dataValidation';
+import { validateChapter, validateQuestionsArray, validateQuestion, logValidationResults } from '@/utils/dataValidation';
 import { logger } from '@/utils/errorLogger';
 
 export interface QuestionsBySubject {

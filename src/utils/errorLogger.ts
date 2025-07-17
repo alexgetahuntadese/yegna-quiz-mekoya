@@ -35,6 +35,7 @@ class ErrorLogger {
     this.logs.push(entry);
     this.trimLogs();
     
+    // Use native console directly to avoid recursion
     console.error(`🚨 [${context}] ${message}`, details || '');
     
     // In production, you might want to send this to an error tracking service
@@ -88,19 +89,3 @@ class ErrorLogger {
 }
 
 export const logger = new ErrorLogger();
-
-// Enhanced console override for better debugging
-if (process.env.NODE_ENV === 'development') {
-  const originalError = console.error;
-  const originalWarn = console.warn;
-
-  console.error = (...args) => {
-    logger.error('Console', args[0], args.slice(1));
-    originalError.apply(console, args);
-  };
-
-  console.warn = (...args) => {
-    logger.warn('Console', args[0], args.slice(1));
-    originalWarn.apply(console, args);
-  };
-}
