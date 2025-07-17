@@ -1,3 +1,4 @@
+
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { GraduationCap, BookOpen, Users, Trophy, LogOut } from "lucide-react";
@@ -12,7 +13,6 @@ import {
 import { AuthContext } from "@/App";
 
 const Index = () => {
-  console.log("Index component rendering");
   const { logout } = useContext(AuthContext);
 
   const handleLogout = () => {
