@@ -9,6 +9,8 @@ import { useAdaptiveTheme } from '@/components/AdaptiveThemeProvider';
 import { usePersonalization } from '@/hooks/usePersonalization';
 import PersonalizedProgressRing from '@/components/PersonalizedProgressRing';
 
+const ExaiHint = React.lazy(() => import('./ExaiHint'));
+
 interface EnhancedQuizInterfaceProps {
   subject: string;
   chapterId: string;
@@ -193,6 +195,12 @@ const EnhancedQuizInterface: React.FC<EnhancedQuizInterfaceProps> = ({
             <p className="text-lg mb-6 leading-relaxed font-medium">
               {currentQuestion.question}
             </p>
+            <React.Suspense fallback={<div className="text-xs text-muted-foreground mb-4">Loading hint…</div>}>
+              <ExaiHint 
+                question={currentQuestion} 
+                onRequested={(level) => trackBehavior('hint_requested', { subject, difficulty, questionId: currentQuestion.id, level })}
+              />
+            </React.Suspense>
             
             <div className="space-y-3">
               {currentQuestion.options.map((option: string, index: number) => {

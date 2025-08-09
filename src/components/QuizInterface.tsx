@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
@@ -8,6 +8,8 @@ import { getQuestionsForQuiz, getChaptersBySubject } from '@/data/questions';
 import { useTranslation } from '@/contexts/TranslationContext';
 import LanguageSelector from '@/components/LanguageSelector';
 
+const ExaiHint = lazy(() => import('./ExaiHint'));
+ 
 interface QuizInterfaceProps {
   subject: string;
   chapterId: string;
@@ -156,6 +158,9 @@ const QuizInterface = ({ subject, chapterId, difficulty, onComplete, onBack }: Q
           </CardHeader>
           <CardContent>
             <p className="text-lg mb-6 leading-relaxed">{currentQuestion.question}</p>
+            <Suspense fallback={<div className="text-xs text-muted-foreground mb-4">Loading hint…</div>}>
+              <ExaiHint question={currentQuestion} />
+            </Suspense>
             
             <div className="space-y-3">
               {currentQuestion.options.map((option: string, index: number) => {
